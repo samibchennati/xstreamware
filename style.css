@@ -118,6 +118,13 @@ nav .fa{
 	text-align: center;
 	padding-top: 100px;
 }
+/*----- easy ----*/
+.easy{
+	width: 80%;
+	margin: auto;
+	text-align: center;
+	padding-top: 0px;
+}
 h1{
 	font-size: 36px;
 	font-weight: 600;
@@ -136,7 +143,7 @@ p{
 }
 .falcon-col{
 	flex-basis: 31%;
-	background: #fff3f3;
+	background: #e5dada;
 	border-radius: 10px;
 	margin-bottom: 5%;
 	padding: 20px 12px;

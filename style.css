@@ -9,6 +9,20 @@
 	background-position: center;
 	background-size: cover;
 	position: relative; 
+	border-bottom-left-radius: 100% 35%;
+	border-bottom-right-radius: 100% 35%;
+}
+.header-other-sections{
+	min-height: 25vh;
+	width: 100%;
+	background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url(images/banner.jpg);
+	background-position: center;
+	background-size: cover;
+	position: relative; 
+	/*
+	border-bottom-left-radius: 100% 35%;
+	border-bottom-right-radius: 100% 35%;
+	*/
 }
 nav{
 	display: flex;
@@ -32,13 +46,13 @@ nav img{
 .nav-links ul li a{
 	color: #fff;
 	text-decoration: none;
-	font-size: 38px;
+	font-size: 18px;
 }
 .nav-links ul li::after{
 	content: '';
 	width: 0%;
 	height: 2px;
-	background: #f44336;
+	background: #999999;
 	display: block;
 	margin: auto;
 	transition: 0.5s;
@@ -60,7 +74,7 @@ nav img{
 }
 .text-box p{
 	margin: 10px 0 40px;
-	font-size: 14px;
+	font-size: 18px;
 	color: #fff;	
 }
 .hero-btn{

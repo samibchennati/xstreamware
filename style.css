@@ -13,7 +13,7 @@
 	border-bottom-right-radius: 100% 35%;
 }
 .header-other-sections{
-	min-height: 25vh;
+	min-height: 35vh;
 	width: 100%;
 	background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url(images/banner.jpg);
 	background-position: center;

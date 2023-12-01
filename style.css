@@ -29,7 +29,11 @@ nav{
 	padding: 2% 6%;
 	justify-content: space-between;
 	align-items: center;
+	position: fixed;
+	transition: background-color 0.4s ease-in-out;
 }
+
+	
 nav img{
 	width: 150px;
 }

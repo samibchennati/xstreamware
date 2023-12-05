@@ -5,7 +5,7 @@
 .header{
 	min-height: 100vh;
 	width: 100%;
-	background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url(images/banner.jpg);
+	background-image: linear-gradient(to bottom right, rgba(60,0,255,0.7),rgba(115,0,255,0.7)),url(images/banner2.jpg);
 	background-position: center;
 	background-size: cover;
 	position: relative; 
@@ -172,6 +172,8 @@ h3{
 	text-align: center;
 	font-weight: 600;
 	margin: 10px 0;
+	font-size: 28px;
+	color: #363636;
 }
 .falcon-col:hover{
 	box-shadow: 0 0 20px 0px rgba(0,0,0,0.2);

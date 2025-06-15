@@ -10,8 +10,8 @@
 <body>
 	<section class="header">
 		<nav>
-			<a href="index.html"><img src="images/logo.png" alt="xstw logo"></a>
 			<div class="nav-links" id="navLinks">
+				<a href="index.html"><img src="images/logo.png" alt="xstw logo"></a>
 				<i class="fa fa-window-close-o" onclick="hideMenu()"></i>
 				<ul>
 					<li><a href="index.html">Home</a></li>
@@ -27,13 +27,13 @@
 		<h1>XsTream Ware</h1>
 		<p>Our software, for a better world.</p>
 		<a href="sections/download.html" class="hero-btn">Download</a>
-		<a href="" class="guide-btn">Installation Guide</a>
+		<a href="installation-guide.html" class="guide-btn">Installation Guide</a>
 	</div>
 	</section>
 <!--------- What is Falcon -------->
 <section class="falcon">
-	<h1>What is Falcon?</h1>
-	<p>Falcon is a terminal based chat client that hosts most of the popular messenging protocols aswell as multiple extensions to modify certain aspects of the program.</p>
+	<h1>What is XT OS ?</h1>
+	<p>XT OS is an Arch based post-installation script that will deploy a suite of configurations as well as associated programs for a general desktop experience.</p>
 	<div class="row">
 		<div class="falcon-col">
 			<h3>Productivity</h3>
@@ -41,7 +41,7 @@
 		</div>
 	<div class="falcon-col">
 			<h3>Multimedia</h3>
-			<p>mpv ?</p>
+			<p></p>
 		</div>
 
 	</div>
@@ -50,7 +50,8 @@
 <section class="easy">
 	<h3><i>Why the ambition?</i></h3>
 	<h1>Easy to use, free and reliable.</h1>
-	<p>Our software is free and open source .</p>
+	<p>Our software is free and open source.</p>
+	<p>Easy to use interface.</p>
 	<!-- This part needs to be verified -->
 	<div class="row">
 		<div class="easy-col">
@@ -60,15 +61,16 @@
 </section>
 <!-----------JavaScript for Toggle Menu----------------->
 <script>
-	var navLinks document.getElementById("navLinks");
+	var navLinks = document.getElementById("navLinks");
 	function showMenu(){
 		navLinks.style.right = "0";
 	}
 	function hideMenu(){
 		navLinks.style.right = "-200px";
 	}
-
-	
 </script>
 </body>
+<footer>
+<p>&copy; XsTream Ware 2025</p>
+</footer>
 </html>

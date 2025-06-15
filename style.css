@@ -3,9 +3,9 @@
 	padding: 0;
 }
 .header{
-	min-height: 100vh;
+	min-height: 40vh;
 	width: 100%;
-	background-image: linear-gradient(to bottom right, rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url(images/banner.jpg);
+	background-image: linear-gradient(to bottom right, rgba(4,9,30,0.5),rgba(4,9,30,0.5)),url(images/banner.jpg);
 	background-position: center;
 	background-size: cover;
 	position: relative; 
@@ -15,7 +15,7 @@
 .header-other-sections{
 	min-height: 35vh;
 	width: 100%;
-	background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url(images/banner.jpg);
+	background-image: linear-gradient(rgba(4,9,30,0.5),rgba(4,9,30,0.3)),url(images/banner.jpg);
 	background-position: center;
 	background-size: cover;
 	position: relative; 
@@ -24,7 +24,7 @@
 	border-bottom-right-radius: 100% 35%;
 	*/
 }
-nav{
+.nav{
 	display: flex;
 	padding: 2% 6%;
 	justify-content: space-between;
@@ -38,8 +38,8 @@ nav img{
 	width: 150px;
 }
 .nav-links{
-	flex: 1;
-	text-align: right;
+	flex-basis: 1;
+	text-align: center;
 }
 .nav-links ul li{
 	list-style: none;
@@ -54,7 +54,7 @@ nav img{
 }
 .nav-links ul li::after{
 	content: '';
-	width: 0%;
+
 	height: 2px;
 	background: #999999;
 	display: block;
@@ -81,6 +81,21 @@ nav img{
 	font-size: 18px;
 	color: #fff;	
 }
+
+.text-box-download{
+	width: 90%;
+	color: #fff;
+	position: absolute;
+	top: 50%; 
+	left: 50%;
+	transform: translate(-50%, -50%);
+	text-align: center;
+}
+.text-box-download p{
+	margin: 10px 0 40px;
+	font-size: 18px;
+	color: #000000;	
+}
 .hero-btn{
 	display: inline-block;
 	text-decoration: none;
@@ -93,7 +108,19 @@ nav img{
 	cursor: pointer;
     border-radius: 6px;
 }
-
+.hero-btn2{
+	display: inline-block;
+	text-decoration: none;
+	color: #FFFFFF;
+	background: #2A7B9B;
+	background: linear-gradient(90deg, rgba(42, 123, 155, 1) 0%, rgba(87, 199, 133, 1) 88%);
+	border: 1px solid #fff;
+	padding: 12px 34px;
+	font-size: 20px;
+	position: relative;
+	cursor: pointer;
+        border-radius: 3 px;
+}
 .guide-btn{
 	display: inline-block;
 	text-decoration: none;
@@ -133,7 +160,7 @@ nav .fa{
 	z-index: 2;
 	transition: 1s;
 }
-nav .fa{
+.nav .fa{
 	display: block;
 	color: #fff;
 	margin: 10px;
@@ -197,5 +224,10 @@ h3{
 	.row{
 		flex-direction: column;
 	}
+}
+
+.footer
+{
+    background-color: #808080;
 }
 

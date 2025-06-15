@@ -34,8 +34,7 @@
 }
 
 #webLogo{
-
-	position: left;
+	width: 150px;
 }
 	
 nav img{
@@ -64,6 +63,9 @@ nav img{
 	display: block;
 	margin: auto;
 	transition: 0.5s;
+}
+.nav-links ul li#webLogo::after{
+	content: none;
 }
 .nav-links ul li:hover::after{
 	width: 100%;

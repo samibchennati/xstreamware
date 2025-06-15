@@ -33,6 +33,10 @@
 	transition: background-color 0.4s ease-in-out;
 }
 
+#webLogo{
+
+	position: left;
+}
 	
 nav img{
 	width: 150px;

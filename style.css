@@ -2,6 +2,8 @@
 	margin: 0;
 	padding: 0;
 }
+/*--------------------------------------------------------------------------------------------------------------------------------------------*/
+/* Header and NAV BAR customization */
 .header{
 	min-height: 40vh;
 	width: 100%;
@@ -40,6 +42,7 @@
 nav img{
 	width: 150px;
 }
+
 .nav-links{
 	flex-basis: 1;
 	text-align: center;
@@ -70,7 +73,22 @@ nav img{
 .nav-links ul li:hover::after{
 	width: 100%;
 }
-.text-box{
+
+
+/*---------------------------------------------------- Footer Common for every page -----------------------------------------------*/
+
+.footer
+{
+    background-color: #808080;
+}
+
+
+
+/*--------------------------------------------------------------- HOME PAGE--------------------------------------------------------------*/
+
+
+/*----------Promo Erea (brand, slogan, buttons)--------------*/
+.promo-box{
 	width: 90%;
 	color: #fff;
 	position: absolute;
@@ -79,16 +97,16 @@ nav img{
 	transform: translate(-50%, -50%);
 	text-align: center;
 }
-.text-box h1{
+.promo-box h1{
 	font-size: 62px;
 }
-.text-box p{
+.promo-box p{
 	margin: 10px 0 40px;
 	font-size: 18px;
 	color: #fff;	
 }
 
-.text-box-download{
+.promo-box-download{
 	width: 90%;
 	color: #fff;
 	position: absolute;
@@ -97,7 +115,7 @@ nav img{
 	transform: translate(-50%, -50%);
 	text-align: center;
 }
-.text-box-download p{
+.promo-box-download p{
 	margin: 10px 0 40px;
 	font-size: 18px;
 	color: #000000;	
@@ -106,13 +124,13 @@ nav img{
 	display: inline-block;
 	text-decoration: none;
 	color: #000000;
-    background-color: #FFFFFF;
+    	background-color: #FFFFFF;
 	border: 1px solid #fff;
 	padding: 12px 34px;
 	font-size: 20px;
 	position: relative;
 	cursor: pointer;
-    border-radius: 6px;
+   	 border-radius: 6px;
 }
 .hero-btn2{
 	display: inline-block;
@@ -177,13 +195,7 @@ nav .fa{
 	padding: 30px;
 }
 }	
-/*----- falcon ----*/
-.falcon{
-	width: 80%;
-	margin: auto;
-	text-align: center;
-	padding-top: 100px;
-}
+
 /*----- easy ----*/
 .easy{
 	width: 80%;
@@ -207,7 +219,21 @@ p{
 	display: flex;
 	justify-content: space-between;
 }
-.falcon-col{
+
+
+
+
+
+/*--------Advantages of our work----------*/
+
+.advantage{
+	width: 80%;
+	margin: auto;
+	text-align: center;
+	padding-top: 100px;
+}
+
+.advantage-col{
 	flex-basis: 31%;
 	background: #F0F0F0;
 	border-radius: 10px;
@@ -223,17 +249,82 @@ h3{
 	font-size: 28px;
 	color: #363636;
 }
-.falcon-col:hover{
+.advantage-col:hover{
 	box-shadow: 0 0 20px 0px rgba(0,0,0,0.2);
 }
+/*--------------------------------------------------------------- PROJECT PAGE--------------------------------------------------------------*/
+
+
+.project-list{
+	width: 80%;
+	margin: auto;
+	text-align: center;
+	padding-top: 100px;
+}
+
+.project1{
+	flex-basis: 31%;
+	background: #F0F0F0;
+	border-radius: 10px;
+	margin-bottom: 5%;
+	padding: 20px 12px;
+	box-sizing: border-box;
+	transition: 0.5s;
+}
+h3{
+	text-align: center;
+	font-weight: 600;
+	margin: 10px 0;
+	font-size: 28px;
+	color: #363636;
+}
+.popup:hover{
+	box-shadow: 0 0 20px 0px rgba(0,0,0,0.2);
+}
+
+
+/*--------------------------------------------------------------- ABOUT US PAGE--------------------------------------------------------------*/
+
+#about-table{
+	font-family: Arial, Helvetica, sans-serif;
+ 	border-collapse: collapse;
+	width: 70%;
+	margin-left: auto;
+  	margin-right: auto;
+}
+
+#about-table td, #about-table th {
+	border: 1px solid #ddd;
+	padding: 8px;
+}
+
+#about-table tr:nth-child(even){background-color: #f2f2f2;}
+
+#about-table tr:hover {background-color: #ddd;}
+
+#about-table th {
+ 	padding-top: 12px;
+ 	padding-bottom: 12px;
+  	text-align: left;
+	background: linear-gradient(90deg, rgba(42, 123, 155, 1) 0%, rgba(87, 199, 133, 1) 88%);
+  	color: white;
+}
+
+
+
+/*--------------------------------------------------------------- LINKS PAGE--------------------------------------------------------------*/
+
+
+
+
+
+
+
+
 @media(max-width: 700px){
 	.row{
 		flex-direction: column;
 	}
 }
 
-.footer
-{
-    background-color: #808080;
-}
 

@@ -420,3 +420,100 @@ h3{
 }
 
 
+
+
+
+/*--------------------------------------------------------------- SERVICES PAGE--------------------------------------------------------------*/
+
+body.services-page{
+  margin: 0;
+  font-family: sans-serif;
+  background: linear-gradient(120deg, #2A7B9B, #57C785);
+}
+
+.services-page .main-content {
+  background: white;
+  width: 100%;
+  min-height: calc(100vh - 35vh); 
+  position: relative;
+  box-sizing: border-box;
+  padding: 0;
+}
+
+.carousel-container {
+  position: relative;
+  width: 100%;
+  perspective: 1200px;
+  overflow: hidden;
+  margin: 0 auto;
+  height: auto;              
+  display: flex;
+  flex-direction: column;    
+  align-items: center;
+  padding: 20px 0;           
+  box-sizing: border-box;
+}
+
+.carousel {
+  width: 100%;
+  height: 450px;             
+  position: relative;
+  transform-style: preserve-3d;
+  margin-bottom: 10px;       
+}
+
+.slide {
+  position: absolute;
+  top: 0;                  
+  left: 50%;
+  transform: translateX(-50%);
+  width: 300px;
+  height: 400px;           
+  transform-style: preserve-3d;
+  transform-origin: center center;
+  border-radius: 12px;
+  overflow: hidden;
+  background: white;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.3);
+  text-align: center;
+  padding: 1rem;
+  z-index: 1;
+}
+
+
+
+.slide img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+.slide h3 {
+  margin: 10px 0 5px;
+}
+
+.slide p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+
+/* Controls */
+.controls {
+  display: flex;
+  justify-content: center;   
+  gap: 1rem;
+  position: relative;
+  z-index: 10;
+}
+
+button {
+  padding: 0.6rem 1.2rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  background: white;
+}

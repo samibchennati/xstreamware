@@ -440,6 +440,11 @@ body.services-page{
   padding: 0;
 }
 
+.services-page h3{
+	padding-bottom: 2%;
+	color: #195d78;
+}
+
 .carousel-container {
   position: relative;
   width: 100%;
@@ -459,6 +464,7 @@ body.services-page{
   height: 450px;             
   position: relative;
   transform-style: preserve-3d;
+  transition: transform 1s;
   margin-bottom: 10px;       
 }
 
@@ -466,7 +472,9 @@ body.services-page{
   position: absolute;
   top: 0;                  
   left: 50%;
-  transform: translateX(-50%);
+  transform-style: preserve-3d;
+  transform-origin: center center -300px;
+  overflow: hidden;
   width: 300px;
   height: 400px;           
   transform-style: preserve-3d;
@@ -474,10 +482,12 @@ body.services-page{
   border-radius: 12px;
   overflow: hidden;
   background: white;
+  border: 1px solid #4ba2c4cc;
   box-shadow: 0 15px 40px rgba(0,0,0,0.3);
   text-align: center;
   padding: 1rem;
   z-index: 1;
+  transition: transform 1s;
 }
 
 
@@ -507,6 +517,7 @@ body.services-page{
   gap: 1rem;
   position: relative;
   z-index: 10;
+  padding-bottom: 5%;
 }
 
 button {
@@ -515,5 +526,111 @@ button {
   border: none;
   border-radius: 8px;
   cursor: pointer;
-  background: white;
+  background: #4ba2c4cc;
+  border: 1px solid #4ba2c4cc;
+}
+
+
+
+
+
+
+
+
+/*--------------------------------------------------------------- CONTACT US PAGE--------------------------------------------------------------*/
+
+.contact-main {
+	display: flex;
+	justify-content: space-between;
+	gap: 50px; /* space between columns */
+	padding: 50px;
+	max-width: 70%;
+	margin: auto;
+	background: white;
+	min-height: 70vh;
+	box-sizing: border-box;
+}
+
+/* Left column: text */
+.contact-text {
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	padding-left: 5%;
+}
+
+.contact-text h1 {
+	font-size: 36px;
+	margin-bottom: 20px;
+	color: #195d78;
+	font-family: sans-serif;
+}
+
+.contact-text p {
+	font-size: 18px;
+	line-height: 1.6;
+	max-width: 60%;
+}
+
+/* Right column: form */
+.contact-form {
+	margin-top: 50px;
+  	flex: 1;
+}
+
+.contact-form form {
+	display: flex;
+	flex-direction: column;
+	gap: 15px;
+}
+
+.contact-form label {
+	font-weight: 600;
+}
+
+
+/* Firstname and Lastname are on the same row */
+.name-row {
+	display: flex;
+	gap: 15px;
+	}
+
+.name-field {
+	flex: 1; /* each field takes equal width */
+	display: flex;
+	flex-direction: column;
+}
+
+.contact-form input,
+.contact-form textarea {
+	padding: 10px;
+	font-size: 16px;
+	border-radius: 6px;
+	border: 1px solid #ccc;
+	width: 100%;
+	box-sizing: border-box;
+}
+
+.contact-form button {
+	padding: 12px;
+	font-size: 18px;
+	background: #2A7B9B;
+	color: white;
+	border: none;
+	border-radius: 6px;
+	cursor: pointer;
+	transition: 0.3s;
+}
+
+.contact-form button:hover {
+	background: #57C785;
+}
+
+
+@media (max-width: 900px) {
+	.contact-main {
+		flex-direction: column;
+		gap: 30px;
+	}
 }

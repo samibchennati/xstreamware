@@ -133,6 +133,18 @@ main{
     transition: all 0.3s ease;
 }
 
+
+.hamburger {
+    display: none;
+}
+
+/* Show hamburger on smaller screens */
+@media (max-width: 768px) {
+    .hamburger {
+        display: flex; 
+    }
+}
+
 .mobile-nav {
     width: 50%;
 	max-width: 300px; 
@@ -1102,6 +1114,18 @@ button {
 .card p {
 	font-size: 0.9rem;
 	color: #423e3e;
+}
+
+
+
+@media(max-width: 480px){
+	.card {
+		width: 25vw;
+	}
+
+	.card img{
+		width: 100%;
+	}
 }
 
 

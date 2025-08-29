@@ -4,51 +4,52 @@
 }
 /*--------------------------------------------------------------------------------------------------------------------------------------------*/
 /* Header and NAV BAR customization */
-.header{
-	min-height: 40vh;
-	width: 100%;
-	/* background-image: linear-gradient(to bottom right, rgba(4,9,30,0.5),rgba(4,9,30,0.5)),url(images/banner.jpg); */
-	background: linear-gradient(90deg, rgba(42, 123, 155, 1) 0%, rgba(87, 199, 133, 1) 88%);
-	background-position: center;
-	background-size: cover;
-	position: relative; 
-	border-bottom-left-radius: 100% 35%;
-	border-bottom-right-radius: 100% 35%;
-}
 .header-other-sections{
 	min-height: 35vh;
 	width: 100%;
-	/*background-image: linear-gradient(rgba(4,9,30,0.5),rgba(4,9,30,0.3)),url(images/banner.jpg);*/
 	background: linear-gradient(90deg, rgba(42, 123, 155, 1) 0%, rgba(87, 199, 133, 1) 88%);
 	background-position: center;
 	background-size: cover;
 	position: relative; 
-	/*
-	border-bottom-left-radius: 100% 35%;
-	border-bottom-right-radius: 100% 35%;
-	*/
 }
-.nav{
+.nav {
 	display: flex;
-	padding: 2% 6%;
-	justify-content: space-between;
+	justify-content: center; 
+	width: 100%;
+	top: 0;
+	z-index: 1000;
+}
+
+.navbar {
+	padding-top: 1%;
+	display: flex;
+	align-items: center;    
+	gap: 20px;
+}
+
+
+/* logo */
+#webLogo img {
+	width: 150px;
+	height: auto;
+}
+
+/* nav links */
+.nav-links {
+	display: flex;
 	align-items: center;
-	position: fixed;
-	transition: background-color 0.4s ease-in-out;
+	gap: 15px;
 }
 
-#webLogo{
-	width: 150px;
-}
-	
-nav img{
-	width: 150px;
+.nav-links ul {
+	display: flex;
+	align-items: center;
+	gap: 15px;
+	list-style: none;
+	margin: 0;
+	padding: 0;
 }
 
-.nav-links{
-	flex-basis: 1;
-	text-align: center;
-}
 .nav-links ul li{
 	list-style: none;
 	display: inline-block;
@@ -74,6 +75,20 @@ nav img{
 }
 .nav-links ul li:hover::after{
 	width: 100%;
+}
+
+
+/* language button */
+.language-toggle button {
+	padding: 0.4rem 0.8rem;
+	border-radius: 5px;
+	border: none;           
+	cursor: pointer;
+	background-color: transparent; 
+	font-weight: bold;
+}
+.language-toggle button:hover {
+	text-decoration: underline;
 }
 
 
@@ -633,4 +648,63 @@ button {
 		flex-direction: column;
 		gap: 30px;
 	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/*--------------------------------------------------------------- ABOUT PAGE--------------------------------------------------------------*/
+.about-main {
+	display: flex;
+	justify-content: center;
+	padding: 2%;
+}
+
+.cards-container {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	gap: 2rem; 
+	max-width: 800px;
+	width: 100%;
+}
+
+.card {
+	background: linear-gradient(360deg, rgba(255, 255, 255, 0.5) 20%, rgba(42, 123, 155, 0.5) 80%);
+	border: 1px solid #2A7B9B;
+	border-radius: 12px;
+	box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+	padding: 1rem;
+	text-align: center;
+	transition: transform 0.3s ease;
+}
+
+.card:hover {
+  	transform: translateY(-5px); 
+}
+
+.card img {
+	width: 200px;
+	height: 200px;
+	object-fit: contain;
+	border-radius: 50%;
+	display: block;
+	margin: 0 auto 1rem;
+}
+
+.card h3 {
+	margin: 1rem 0 0.5rem;
+	color: #292727;
+}
+
+.card p {
+	font-size: 0.9rem;
+	color: #423e3e;
 }

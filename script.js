@@ -33,3 +33,24 @@ window.onload = () => {
 
   updateSlides(0); // initial
 };
+
+
+
+
+
+let currentLang = 'en'; // default language
+
+const langBtn = document.getElementById('languageButton');
+
+langBtn.addEventListener('click', () => {
+  currentLang = currentLang === 'en' ? 'fr' : 'en';
+  
+  // update all text elements
+  document.querySelectorAll('[data-lang-en]').forEach(el => {
+    el.textContent = el.getAttribute(`data-lang-${currentLang}`);
+  });
+
+  // update language label
+  langBtn.textContent = currentLang === 'en' ? 'Français' : 'English';
+});
+

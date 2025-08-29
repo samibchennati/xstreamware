@@ -9,24 +9,34 @@
 </head>
 <body class="contact-page">
 	<section class="header-other-sections">
-		<nav>
-			<div class="nav-links" id="navLinks">
-				<i class="fa fa-window-close-o" onclick="hideMenu()"></i>
+		<nav class="nav">
+			<div class="navbar">
+				<div id="webLogo"><a href="index.html"><img src="../images/logo.png" alt="xstw logo"></a></div>
+
+				<div class="nav-links">
 				<ul>
-					<li id="webLogo"><a href="index.html"><img src="../images/logo.png" alt="xstw logo"></a></li>
-					<li><a href="../index.html">Home</a></li>
-					<!--<li><a href="download.html">Download</a></li>-->
-					<!--<li><a href="project.html">Project</a></li>-->
-					<li><a href="services.html">Services</a></li>
-					<li><a href="about.html">About</a></li>
-					<li><a href="links.html">Links</a></li>
-                    <li><a href="contact.html">Contact Us</a></li>
-				</ul> 
+					<li><a href="../index.html" data-lang-en="Home" data-lang-fr="Accueil">Home</a></li>
+					<li><a href="download.html" data-lang-en="Download" data-lang-fr="Téléchargement">Downloads</a></li>
+					<li><a href="project.html" data-lang-en="Project" data-lang-fr="Projet">Project</a></li>
+					<li><a href="services.html" data-lang-en="Services" data-lang-fr="Services">Services</a></li>
+					<li><a href="about.html" data-lang-en="About" data-lang-fr="À Propos">About</a></li>
+					<li><a href="links.html" data-lang-en="Links" data-lang-fr="Liens">Links</a></li>
+					<li><a href="contact.html" data-lang-en="Contact Us" data-lang-fr="Contactez-Nous">Contact Us</a></li>
+				</ul>
+				</div>
+
+				<div class="language-toggle">
+				<button id="languageButton">Français</button>
+				</div>
+
+				<i class="fa fa-bars" onclick="showMenu()"></i>
 			</div>
-			<i class="fa fa-bars" onclick="showMenu()"></i>
 		</nav>
+
+
+
 	<div class="promo-box">
-		<h1>Contact Us</h1>
+		<h1 data-lang-en="Contact Us" data-lang-fr="Contactez-Nous">Contact Us</h1>
 	</div>
 	</section>
 
@@ -34,8 +44,9 @@
 
     <main class="contact-main">
         <div class="contact-text">
-            <h1>Get In Touch</h2>
-            <p>
+            <h1 data-lang-en="Get In Touch" data-lang-fr="Contactez-Nous">Get In Touch</h2>
+            <p data-lang-en="Have any questions or feedback? Fill out the form, and we'll get back to you as soon as possible."
+                data-lang-fr="Vous avez des questions ou des commentaires ? Remplissez le formulaire et nous vous répondrons dans les plus brefs délais.">
                 Have any questions or feedback? Fill out the form, and we'll get back to you as soon as possible.
             </p>
         </div>
@@ -44,28 +55,28 @@
             <form action="" method="post">
                 <div class="name-row">
                     <div class="name-field">
-                    <label for="firstname">First Name</label>
+                    <label for="firstname" data-lang-en="First Name" data-lang-fr="Prénom">First Name</label>
                     <input type="text" id="firstname" name="firstname" required>
                     </div>
 
                     <div class="name-field">
-                    <label for="lastname">Last Name</label>
+                    <label for="lastname" data-lang-en="Last Name" data-lang-fr="Nom de Famille">Last Name</label>
                     <input type="text" id="lastname" name="lastname" required>
                     </div>
                 </div>
 
-                <label for="email">Email</label>
+                <label for="email" data-lang-en="Email" data-lang-fr="Addresse Courriel">Email</label>
                 <input type="email" id="email" name="email" required>
 
-                <label for="message">Message</label>
+                <label for="message" data-lang-en="Message" data-lang-fr="Message">Message</label>
                 <textarea id="message" name="message" rows="6" required></textarea>
 
-                <button type="submit">Send</button>
+                <button type="submit" data-lang-en="Send" data-lang-fr="Envoyer">Send</button>
             </form>
         </div>
     </main>
 
 
-
+<script src="../script.js"></script>
 </body>
 </html>

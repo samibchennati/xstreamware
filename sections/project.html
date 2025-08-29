@@ -9,24 +9,34 @@
 </head>
 <body>
 	<section class="header-other-sections">
-		<nav>
-			<div class="nav-links" id="navLinks">
-				<i class="fa fa-window-close-o" onclick="hideMenu()"></i>
+		<nav class="nav">
+			<div class="navbar">
+				<div id="webLogo"><a href="index.html"><img src="../images/logo.png" alt="xstw logo"></a></div>
+
+				<div class="nav-links">
 				<ul>
-					<li id="webLogo"><a href="index.html"><img src="../images/logo.png" alt="xstw logo"></a></li>
-					<li><a href="../index.html">Home</a></li>
-					<li><a href="download.html">Download</a></li>
-					<li><a href="project.html">Project</a></li>
-                    <li><a href="services.html">Services</a></li>
-					<li><a href="about.html">About</a></li>
-					<li><a href="links.html">Links</a></li>
-					<li><a href="contact.html">Contact Us</a></li>
-				</ul> 
+					<li><a href="../index.html" data-lang-en="Home" data-lang-fr="Accueil">Home</a></li>
+					<li><a href="download.html" data-lang-en="Download" data-lang-fr="Téléchargement">Downloads</a></li>
+					<li><a href="project.html" data-lang-en="Project" data-lang-fr="Projet">Project</a></li>
+					<li><a href="services.html" data-lang-en="Services" data-lang-fr="Services">Services</a></li>
+					<li><a href="about.html" data-lang-en="About" data-lang-fr="À Propos">About</a></li>
+					<li><a href="links.html" data-lang-en="Links" data-lang-fr="Liens">Links</a></li>
+					<li><a href="contact.html" data-lang-en="Contact Us" data-lang-fr="Contactez-Nous">Contact Us</a></li>
+				</ul>
+				</div>
+
+				<div class="language-toggle">
+				<button id="languageButton">Français</button>
+				</div>
+
+				<i class="fa fa-bars" onclick="showMenu()"></i>
 			</div>
-			<i class="fa fa-bars" onclick="showMenu()"></i>
 		</nav>
+
+
+
 	<div class="promo-box">
-		<h1>Project</h1>
+		<h1 data-lang-en="Project" data-lang-fr="Projet">Project</h1>
 	</div>
 	</section>
 	
@@ -54,6 +64,6 @@
 	</div>
 	
 </section>
-	
+<script src="../script.js"></script>
 </body>
 </html>

@@ -9,30 +9,36 @@
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/fontawesome.min.css">
 </head>
 <body>
-	<section class="header">
-		<nav>
-			<div class="nav-links" id="navLinks">
+	<section class="header-other-sections">
+		<nav class="nav">
+			<div class="navbar">
+				<div id="webLogo"><a href="index.html"><img src="images/logo.png" alt="xstw logo"></a></div>
 
-				<i class="fa fa-window-close-o" onclick="hideMenu()"></i>
-				<ul>				
-					<li id="webLogo"><a href="index.html"><img src="images/logo.png" alt="xstw logo"></a></li>
-					<li><a href="index.html">Home</a></li>
-					<!--<li><a href="sections/download.html">Download</a></li>-->
-					<!--<li><a href="sections/project.html">Project</a></li>-->
-					<li><a href="sections/services.html">Services</a></li>
-					<li><a href="sections/about.html">About</a></li>
-					<li><a href="sections/links.html">Links</a></li>
-					<li><a href="sections/contact.html">Contact Us</a></li>
-				</ul> 
+				<div class="nav-links">
+				<ul>
+					<li><a href="index.html" data-lang-en="Home" data-lang-fr="Accueil">Home</a></li>
+					<li><a href="sections/download.html" data-lang-en="Download" data-lang-fr="Téléchargement">Downloads</a></li>
+					<li><a href="sections/project.html" data-lang-en="Project" data-lang-fr="Projet">Project</a></li>
+					<li><a href="sections/services.html" data-lang-en="Services" data-lang-fr="Services">Services</a></li>
+					<li><a href="sections/about.html" data-lang-en="About" data-lang-fr="À Propos">About</a></li>
+					<li><a href="sections/links.html" data-lang-en="Links" data-lang-fr="Liens">Links</a></li>
+					<li><a href="sections/contact.html" data-lang-en="Contact Us" data-lang-fr="Contactez-Nous">Contact Us</a></li>
+				</ul>
+				</div>
+
+				<div class="language-toggle">
+				<button id="languageButton">Français</button>
+				</div>
+
+				<i class="fa fa-bars" onclick="showMenu()"></i>
 			</div>
-			<i class="fa fa-bars" onclick="showMenu()"></i>
 		</nav>
 		
 <!---------------------------------------------------------------CENTER PEICE-------------------------------------------------------------->
 		
 	<div class="promo-box">
 		<h1>XsTream Ware</h1>
-		<p>Our software, for a better world.</p>
+		<p data-lang-en="Our software, for a better world." data-lang-fr="Notre logiciel, pour un monde meilleur">Our software, for a better world.</p>
 		<!--
 		<a href="sections/download.html" class="hero-btn">Download</a>
 		<a href="installation-guide.html" class="guide-btn">Installation Guide</a>
@@ -82,8 +88,8 @@
 <!------------------ Easy --------------->
 <section class="easy">
 
-	<h3><i>Why the ambition?</i></h3>
-	<h1>Easy to use, free and reliable.</h1>
+	<h3 data-lang-en="Why the ambition?" data-lang-fr="Pourquoi cette ambition?"><i>Why the ambition?</i></h3>
+	<h1 data-lang-en="Easy to use, free, and reliable" data-lang-fr="Facile à utliser, gratuit, et reliable">Easy to use, free, and reliable.</h1>
 	
 	
 </section>
@@ -101,6 +107,7 @@
 		navLinks.style.right = "-200px";
 	}
 </script>
+<script src="script.js"></script>
 </body>
 <footer class="foot">
 <p>&copy; XsTream Ware 2025</p>

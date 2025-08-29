@@ -664,8 +664,10 @@ button {
 /*--------------------------------------------------------------- ABOUT PAGE--------------------------------------------------------------*/
 .about-main {
 	display: flex;
-	justify-content: center;
+	flex-direction: column;
+	align-items: center;
 	padding: 2%;
+	gap: 2rem;
 }
 
 .cards-container {
@@ -707,4 +709,45 @@ button {
 .card p {
 	font-size: 0.9rem;
 	color: #423e3e;
+}
+
+
+
+
+
+
+
+
+.cards-container-v2 {
+	display: flex;
+	flex-direction: column;
+	gap: 2rem; 
+	width: 100%;
+}
+
+.card-left, .card-right {
+	display: flex;
+	align-items: center;
+	gap: 2rem;
+	width: 50%;       
+	margin: 0 auto;   
+}
+
+.card-right{
+  	flex-direction: row-reverse; 
+}
+
+.card-left img, .card-right img {
+	width: 150px;
+	height: 150px;
+	object-fit: cover;
+	border-radius: 50%; 
+}
+
+.card-left .card-text h3, .card-left .card-text p{
+  	text-align: left;   
+}
+
+.card-right .card-text h3, .card-right .card-text p{
+  	text-align: right;  
 }

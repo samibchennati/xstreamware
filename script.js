@@ -2,6 +2,8 @@ window.onload = () => {
   const slides = document.querySelectorAll('.slide');
   const radios = document.querySelectorAll('.controls input');
 
+  let currentIndex = 0;
+
   function updateSlides(current) {
     slides.forEach((slide, i) => {
       slide.style.opacity = 0;
@@ -21,18 +23,29 @@ window.onload = () => {
         slide.style.zIndex = 1;
       }
     });
+
+    // update radio buttons to match current slide
+    if (radios[current]) radios[current].checked = true;
   }
 
   radios.forEach((radio, i) => {
     radio.addEventListener('change', () => {
       if (radio.checked) {
-        updateSlides(i);
+        currentIndex = i;  
+        updateSlides(currentIndex);
       }
     });
   });
 
-  updateSlides(0); // initial
+  updateSlides(currentIndex); // initial slide
+
+  // automatic rotation every 5 seconds
+  setInterval(() => {
+    currentIndex = (currentIndex + 1) % slides.length;
+    updateSlides(currentIndex);
+  }, 5000);
 };
+
 
 
 

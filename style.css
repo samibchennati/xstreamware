@@ -2,11 +2,19 @@
 	margin: 0;
 	padding: 0;
 }
+html, body {
+    width: 100%;
+    min-width: 100%;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-x: hidden; /* prevents horizontal scroll */
+}
 /*--------------------------------------------------------------------------------------------------------------------------------------------*/
 /* Header and NAV BAR customization */
 .header-other-sections{
 	min-height: 35vh;
-	width: 100%;
+	width: 100vw;
 	background: linear-gradient(90deg, rgba(42, 123, 155, 1) 0%, rgba(87, 199, 133, 1) 88%);
 	background-position: center;
 	background-size: cover;
@@ -92,19 +100,123 @@
 }
 
 
+
+main{
+	margin-bottom:10%;
+}
+
+
+
+
+
+
+
+
+
+/* FOR MOBILE */
+.hamburger{
+	width: 20px;
+    height: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+    z-index: 1000; 
+    position: relative;
+}
+.hamburger span {
+    display: block;
+    height: 4px;
+    width: 100%;
+    background-color: white;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+}
+
+.mobile-nav {
+    width: 50%;
+	max-width: 300px; 
+	height: 100vh;
+	position: fixed;
+	top: 0;
+	right: -100%; 
+	background: #4d4d4d; 
+	color: white;
+	z-index: 999;
+	padding: 2rem 1rem;
+	padding-top: 20%;
+	transition: right 0.3s ease-in-out;
+	z-index: 1;
+}
+.mobile-nav.show {
+    right: 0;
+}
+.mobile-nav ul{
+	list-style: none;
+	display: flex;
+	flex-direction: column;
+	gap: 40px; 
+}
+.mobile-nav a{
+	color: white;
+	text-decoration: none;
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+
 /*---------------------------------------------------- Footer Common for every page -----------------------------------------------*/
 
-.foot
-{
-    background-color: #797978;
-    min-height: 100px;
+.foot {
+    background-color: #535659;
+    min-height: 300px;
     color: #fff;
+    text-align: center;
+    padding: 2rem 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; 
+    align-items: center;
+    box-sizing: border-box;
 }
-.foot p
-{
-    padding-top: 10px;
+
+.foot h1 {
+    font-size: 300%;
+    margin-bottom: 0.5rem;
+    font-family: sans-serif;
+    padding-bottom: 2%;
+}
+
+.foot p {
+    margin: 0.5rem 0;
     padding-left: 10px;
+    padding-bottom: 1%;
 }
+
+.foot .social-links {
+    margin: 1rem 0;
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem; 
+    padding-bottom: 3%;
+}
+
+.foot img {
+    width: 30px;
+    height: 30px;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+}
+
+.foot .social-links img:hover {
+    transform: scale(1.2);
+}
+
+.foot .copyright {
+    font-size: 0.9rem;
+    color: #aaa;
+    margin-top: auto; 
+}
+
 
 
 /*--------------------------------------------------------------- HOME PAGE--------------------------------------------------------------*/
@@ -404,6 +516,10 @@ footer.foot {
 	text-align: center;
 }
 
+.download-main{
+	min-height: 100vh;
+}
+
 
 /*--------------------------------------------------------------- PROJECT PAGE--------------------------------------------------------------*/
 
@@ -487,18 +603,22 @@ h3{
 /*--------------------------------------------------------------- SERVICES PAGE--------------------------------------------------------------*/
 
 body.services-page{
-  margin: 0;
-  font-family: sans-serif;
-  background: linear-gradient(120deg, #2A7B9B, #57C785);
+	margin: 0;
+	font-family: sans-serif;
+	background: linear-gradient(120deg, #2A7B9B, #57C785);
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
 }
 
-.services-page .main-content {
-  background: white;
-  width: 100%;
-  min-height: calc(100vh - 35vh); 
-  position: relative;
-  box-sizing: border-box;
-  padding: 0;
+.services-page .services-main {
+	background: white;
+	width: 100%;
+	min-height: 100vh;
+	position: relative;
+	box-sizing: border-box;
+	padding: 0;
+	flex: 1;
 }
 
 .services-page h3{
@@ -507,89 +627,316 @@ body.services-page{
 }
 
 .carousel-container {
-  position: relative;
-  width: 100%;
-  perspective: 1200px;
-  overflow: hidden;
-  margin: 0 auto;
-  height: auto;              
-  display: flex;
-  flex-direction: column;    
-  align-items: center;
-  padding: 20px 0;           
-  box-sizing: border-box;
+	position: relative;
+	width: 90%;
+	perspective: 1200px;
+	overflow: hidden;
+	margin: 0 auto;
+	height: auto;              
+	display: flex;
+	flex-direction: column;    
+	align-items: center;
+	padding: 20px 0;           
+	box-sizing: border-box;
 }
 
 .carousel {
-  width: 100%;
-  height: 450px;             
-  position: relative;
-  transform-style: preserve-3d;
-  transition: transform 1s;
-  margin-bottom: 10px;       
+	width: 100%;
+	height: 450px;             
+	position: relative;
+	transform-style: preserve-3d;
+	transition: transform 1s;
+	margin-bottom: 10px;       
 }
 
 .slide {
-  position: absolute;
-  top: 0;                  
-  left: 50%;
-  transform-style: preserve-3d;
-  transform-origin: center center -300px;
-  overflow: hidden;
-  width: 300px;
-  height: 400px;           
-  transform-style: preserve-3d;
-  transform-origin: center center;
-  border-radius: 12px;
-  overflow: hidden;
-  background: white;
-  border: 1px solid #4ba2c4cc;
-  box-shadow: 0 15px 40px rgba(0,0,0,0.3);
-  text-align: center;
-  padding: 1rem;
-  z-index: 1;
-  transition: transform 1s;
+	position: absolute;
+	top: 0;                  
+	left: 50%;
+	transform-style: preserve-3d;
+	transform-origin: center center -300px;
+	overflow: hidden;
+	width: 200px;
+	height: 300px;           
+	transform-style: preserve-3d;
+	transform-origin: center center;
+	overflow: hidden;
+	background: white;
+	text-align: center;
+	padding: 1rem;
+	z-index: 1;
+	transition: transform 1s;
 }
 
 
 
 .slide img {
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
-  border-radius: 12px;
-}
-
-.slide h3 {
-  margin: 10px 0 5px;
+	width: 200px;
+	height: 200px;
+	object-fit: cover;
+	border: 1px solid black;
+	border-radius: 50%;
 }
 
 .slide p {
-  margin: 0;
-  font-size: 0.9rem;
-  color: #555;
+	margin: 0;
+	font-size: 0.9rem;
+	color: #555;
 }
 
 
 /* Controls */
 .controls {
-  display: flex;
-  justify-content: center;   
-  gap: 1rem;
-  position: relative;
-  z-index: 10;
-  padding-bottom: 5%;
+	display: flex;
+	justify-content: center;   
+	gap: 1rem;
+	position: relative;
+	z-index: 10;
+	padding-bottom: 5%;
 }
 
 button {
-  padding: 0.6rem 1.2rem;
-  font-size: 1rem;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  background: #4ba2c4cc;
-  border: 1px solid #4ba2c4cc;
+	padding: 0.6rem 1.2rem;
+	font-size: 1rem;
+	border: none;
+	border-radius: 8px;
+	cursor: pointer;
+	background: #4ba2c4cc;
+	border: 1px solid #4ba2c4cc;
 }
+
+
+
+
+
+
+
+
+.carousel-container-alt{
+	padding-bottom: 5%;
+}
+.carousel-alt {
+	position: relative;
+	width: 90%;
+	height: 250px;
+	margin: 2rem auto;
+	overflow: hidden;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding-bottom: 5%;
+}
+
+.slide-alt {
+	flex: 0 0 180px;
+	height: 250px;
+	text-align: center;
+	opacity: 0;
+	padding: 2rem;
+	transform: scale(0.8);
+	transition: transform 0.5s ease, opacity 0.5s ease;
+	transform-style: preserve-3d;
+	transform-origin: center center;
+	z-index: 1;
+	position: absolute;
+}
+
+.slide-alt img {
+	width: 100px;
+	height: 100px;
+	object-fit: cover;
+	border-radius: 50%;
+	padding-top: 10%;
+}
+
+.slide-alt p{
+	font-size: 0.8rem;
+	color: #555;
+}
+
+/* Visible slides */
+.slide-alt.prev { /* far left */
+	opacity: 0.6;
+	transform: scale(0.9) rotateY(-40deg);
+	left: calc(50% - 600px); 
+	z-index: 2;
+}
+
+.slide-alt.center-left { /* center left */
+	opacity: 1;
+	left: calc(50% - 315px); 
+	z-index: 3;
+	transform: scale(1.1) rotateY(-15deg);
+}
+
+.slide-alt.center-right { /* center right */
+	opacity: 1;
+	left: calc(50% + 50px); 
+	z-index: 3;
+	transform: scale(1.1) rotateY(15deg);
+}
+
+.slide-alt.next { /* far right */
+	opacity: 0.6;
+	left: calc(50% + 350px); 
+	z-index: 2;
+	transform: scale(0.9) rotateY(40deg);
+}
+
+
+
+.carousel-alt-controls {
+    display: flex;
+    justify-content: center;   
+    gap: 1rem;                 
+    margin-top: 1rem;          
+    position: static;         
+}
+.arrow-alt {
+    position: static;          
+    transform: none;           
+    background-color: rgba(42,123,155,0.7);
+    color: white;
+    border: none;
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: background-color 0.3s;
+}
+
+.arrow-alt:hover {
+	background-color: rgba(42,123,155,1);
+}
+
+.prev-alt {
+	left: 10px;
+}
+
+.next-alt {
+	right: 10px;
+}
+
+.slide-alt.hidden {
+	opacity: 0;
+	z-index: 0;
+	transform: scale(0.8);
+	left: 50%; 
+}
+
+
+
+
+
+
+
+
+
+.carousel-container-alt-5 {
+	position: relative;
+	width: 90%;
+	perspective: 1200px;
+	overflow: hidden;
+	margin: 0 auto;
+	height: auto;              
+	display: flex;
+	flex-direction: column;    
+	align-items: center;
+	padding: 20px 0;           
+	box-sizing: border-box;
+}
+
+.carousel-alt-5 {
+	width: 100%;
+	height: 350px;             
+	position: relative;
+	transform-style: preserve-3d;
+	transition: transform 1s;
+	margin-bottom: 10px; 
+	margin-top: 5%;      
+}
+.carousel-container-alt-5 h1{
+	color: #195d78;
+}
+
+.slide-alt-5 {
+	position: absolute;
+	top: 0;                  
+	left: 50%;
+	transform-style: preserve-3d;
+	transform-origin: center center -300px;
+	overflow: hidden;
+	width: 200px;
+	height: 300px;           
+	transform-style: preserve-3d;
+	transform-origin: center center;
+	overflow: hidden;
+	background: white;
+	text-align: center;
+	padding: 1rem;
+	z-index: 1;
+	transition: transform 1s;
+}
+
+
+
+.slide-alt-5 img {
+	width: 100px;
+	height: 100px;
+	object-fit: cover;
+	border: 1px solid black;
+	border-radius: 50%;
+}
+
+.slide-alt-5 p {
+	margin: 0;
+	font-size: 0.9rem;
+	color: #555;
+	padding-top: 10%;
+	font-weight: bold;
+}
+
+.controls-alt-5{
+	padding-bottom: 5%;
+}
+
+
+/* On tablets */
+@media (max-width: 768px) {
+  .carousel-container {
+    max-width: 90%;  
+  }
+}
+
+/* On phones */
+@media (max-width: 480px) {
+	.carousel-container-alt-5 {
+		max-width: 100%;
+	}
+
+	.carousel-alt-5{
+		height: 250px;
+	}
+
+	.slide-alt-5 {
+		height: 200px;   
+		width: 100px;
+	}
+
+	.carousel-container-alt-5 h1{
+		color: #195d78;
+		font-size: 1.5rem;
+	}
+
+	.slide-alt-5 img {
+		height: 50px;   
+		width: 50px;
+	}
+}
+
+
+
+
 
 
 

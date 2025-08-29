@@ -29,7 +29,24 @@
 				<button id="languageButton">Français</button>
 				</div>
 
-				<i class="fa fa-bars" onclick="showMenu()"></i>
+				<!-- Hamburger Menu -->
+				<div class="hamburger" onclick="showMenu()">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+
+                <div class="mobile-nav" id="mobileNav">
+                    <ul>
+                        <li><a href="../index.html" data-lang-en="Home" data-lang-fr="Accueil">Home</a></li>
+                        <li><a href="download.html" data-lang-en="Download" data-lang-fr="Téléchargement">Downloads</a></li>
+                        <li><a href="project.html" data-lang-en="Project" data-lang-fr="Projet">Project</a></li>
+                        <li><a href="services.html" data-lang-en="Services" data-lang-fr="Services">Services</a></li>
+                        <li><a href="about.html" data-lang-en="About" data-lang-fr="À Propos">About</a></li>
+                        <li><a href="links.html" data-lang-en="Links" data-lang-fr="Liens">Links</a></li>
+                        <li><a href="contact.html" data-lang-en="Contact Us" data-lang-fr="Contactez-Nous">Contact Us</a></li>
+                    </ul>
+                </div>
 			</div>
 		</nav>
 
@@ -41,4 +58,26 @@
 	</section>
 <script src="../script.js"></script>
 </body>
+
+
+<footer class="foot">
+  <h1>About XsTW</h2>
+  <p>Who We Are</p>
+  
+  <div class="social-links">
+    <a href="https://www.linkedin.com" target="_blank">
+      <img src="../images/linkedin.png" alt="LinkedIn">
+    </a>
+    <a href="https://twitter.com" target="_blank">
+      <img src="../images/twitter.png" alt="Twitter">
+    </a>
+    <a href="https://instagram.com" target="_blank">
+      <img src="../images/instagram.png" alt="Instagram">
+    </a>
+  </div>
+  
+  <p class="copyright">&copy; XsTream Ware 2025</p>
+</footer>
+
+
 </html>

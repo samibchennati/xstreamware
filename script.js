@@ -1,56 +1,85 @@
-window.onload = () => {
-  const slides = document.querySelectorAll('.slide');
-  const radios = document.querySelectorAll('.controls input');
+// carousel-alt-5
+window.addEventListener('load', () => {
+  const slidesAlt = document.querySelectorAll('.slide-alt-5');
+  const radios = document.querySelectorAll('.controls-alt-5 input');
 
-  let currentIndex = 0;
+  let currentAlt = 0;
+  const len = slidesAlt.length;
 
-  function updateSlides(current) {
-    slides.forEach((slide, i) => {
+  function updateSlidesAlt() {
+    slidesAlt.forEach((slide) => {
       slide.style.opacity = 0;
       slide.style.zIndex = 0;
-
-      if (i === current) {
-        slide.style.opacity = 1;
-        slide.style.transform = "translateX(-50%) scale(1) rotateY(0deg)";
-        slide.style.zIndex = 2;
-      } else if (i === (current - 1 + slides.length) % slides.length) {
-        slide.style.opacity = 1;
-        slide.style.transform = "translateX(-150%) scale(0.8) rotateY(-20deg)";
-        slide.style.zIndex = 1;
-      } else if (i === (current + 1) % slides.length) {
-        slide.style.opacity = 1;
-        slide.style.transform = "translateX(50%) scale(0.8) rotateY(20deg)";
-        slide.style.zIndex = 1;
-      }
+      slide.style.transform = 'translateX(-50%) scale(0.8) rotateY(0deg)';
     });
 
-    // update radio buttons to match current slide
-    if (radios[current]) radios[current].checked = true;
+    // Adjust spacing between each slide depending on screen size
+    const isMobile = window.innerWidth <= 600;
+    const offsetSmall = isMobile ? 120 : 200; // smaller gap on mobile
+    const offsetLarge = isMobile ? 220 : 350; // outer slides closer
+
+    const positions = [
+      {offset: -2, scale: 0.8, rotate: -40, opacity: 0.6, z: 1, translateX: -offsetLarge},
+      {offset: -1, scale: 0.9, rotate: -20, opacity: 0.8, z: 2, translateX: -offsetSmall},
+      {offset: 0,  scale: 1.1, rotate: 0,   opacity: 1, z: 3, translateX: 0}, 
+      {offset: 1,  scale: 0.9, rotate: 20,  opacity: 0.8, z: 2, translateX: offsetSmall},
+      {offset: 2,  scale: 0.8, rotate: 40,  opacity: 0.6, z: 1, translateX: offsetLarge}
+    ];
+
+    positions.forEach(pos => {
+      const slideIndex = (currentAlt + pos.offset + len) % len;
+      const slide = slidesAlt[slideIndex];
+      slide.style.opacity = pos.opacity;
+      slide.style.zIndex = pos.z;
+
+      slide.style.transform = `translateX(calc(-50% + ${pos.translateX}px)) scale(${pos.scale}) rotateY(${pos.rotate}deg)`;
+    });
+
+    if (radios[currentAlt]) radios[currentAlt].checked = true;
   }
 
+
+
+  updateSlidesAlt();
+
+  // Automatic rotation
+  let interval = setInterval(() => {
+    currentAlt = (currentAlt + 1) % len;
+    updateSlidesAlt();
+  }, 3500);
+
+  // Radio buttons
   radios.forEach((radio, i) => {
     radio.addEventListener('change', () => {
       if (radio.checked) {
-        currentIndex = i;  
-        updateSlides(currentIndex);
+        currentAlt = i;
+        updateSlidesAlt();
+        resetInterval();
       }
     });
   });
 
-  updateSlides(currentIndex); // initial slide
-
-  // automatic rotation every 5 seconds
-  setInterval(() => {
-    currentIndex = (currentIndex + 1) % slides.length;
-    updateSlides(currentIndex);
-  }, 5000);
-};
-
-
+  function resetInterval() {
+    clearInterval(interval);
+    interval = setInterval(() => {
+      currentAlt = (currentAlt + 1) % len;
+      updateSlidesAlt();
+    }, 3500);
+  }
+});
 
 
 
 
+
+
+
+
+
+
+
+
+// translation
 let currentLang = 'en'; // default language
 
 const langBtn = document.getElementById('languageButton');
@@ -67,3 +96,22 @@ langBtn.addEventListener('click', () => {
   langBtn.textContent = currentLang === 'en' ? 'Français' : 'English';
 });
 
+
+
+
+
+
+
+
+
+
+
+// mobile navbar
+function showMenu() {
+  const mobileNav = document.getElementById("mobileNav");
+  if(mobileNav) {                 
+      mobileNav.classList.toggle("show");
+  } else {
+      console.log("mobileNav not found!");
+  }
+}

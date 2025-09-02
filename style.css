@@ -641,7 +641,7 @@ body.services-page{
 }
 
 .services-page .services-main {
-	background: white;
+	background: var(--bg);
 	width: 100%;
 	min-height: 100vh;
 	position: relative;
@@ -867,7 +867,7 @@ button {
 }
 
 .carousel-container-alt-5 h1{
-	color: #195d78;
+	color: var(--primary);
 }
 
 .slide-alt-5 {
@@ -882,7 +882,7 @@ button {
 	transform-style: preserve-3d;
 	transform-origin: center center;
 	overflow: hidden;
-	background: white;
+	background: var(--bg);
 	text-align: center;
 	padding: 1rem;
 	z-index: 1;

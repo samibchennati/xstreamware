@@ -12,77 +12,151 @@
 <body class="services-page">
 
     <section class="header-other-sections">
-		<nav>
-			<div class="nav-links" id="navLinks">
-				<i class="fa fa-window-close-o" onclick="hideMenu()"></i>
+		<nav class="nav">
+			<div class="navbar">
+				<div id="webLogo"><a href="../index.html"><img src="../images/logo.png" alt="xstw logo"></a></div>
+
+				<div class="nav-links">
 				<ul>
-					<li id="webLogo"><a href="index.html"><img src="../images/logo.png" alt="xstw logo"></a></li>
-					<li><a href="../index.html">Home</a></li>
-					<!--<li><a href="download.html">Download</a></li>-->
-					<!--<li><a href="project.html">Project</a></li>-->
-                    <li><a href="services.html">Services</a></li>
-					<li><a href="about.html">About</a></li>
-					<li><a href="links.html">Links</a></li>
-                    <li><a href="contact.html">Contact Us</a></li>
-				</ul> 
+					<li><a href="../index.html" data-lang-en="Home" data-lang-fr="Accueil">Home</a></li>
+					<!-- <li><a href="download.html" data-lang-en="Download" data-lang-fr="Téléchargement">Downloads</a></li> -->
+					<!-- <li><a href="project.html" data-lang-en="Project" data-lang-fr="Projet">Project</a></li> -->
+					<li><a href="services.html" data-lang-en="Services" data-lang-fr="Services">Services</a></li>
+					<li><a href="about.html" data-lang-en="About" data-lang-fr="À Propos">About</a></li>
+					<!--<li><a href="links.html" data-lang-en="Links" data-lang-fr="Liens">Links</a></li>-->
+					<li><a href="contact.html" data-lang-en="Contact Us" data-lang-fr="Contactez-Nous">Contact Us</a></li>
+				</ul>
+				</div>
+
+				<div class="language-toggle">
+				<button id="languageButton">Français</button>
+				</div>
+
+
+                <!-- Hamburger Menu -->
+				<div class="hamburger" onclick="showMenu()">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+
+                <div class="mobile-nav" id="mobileNav">
+                    <ul>
+                        <li><a href="../index.html" data-lang-en="Home" data-lang-fr="Accueil">Home</a></li>
+                        <li><a href="download.html" data-lang-en="Download" data-lang-fr="Téléchargement">Downloads</a></li>
+                        <li><a href="project.html" data-lang-en="Project" data-lang-fr="Projet">Project</a></li>
+                        <li><a href="services.html" data-lang-en="Services" data-lang-fr="Services">Services</a></li>
+                        <li><a href="about.html" data-lang-en="About" data-lang-fr="À Propos">About</a></li>
+                        <li><a href="links.html" data-lang-en="Links" data-lang-fr="Liens">Links</a></li>
+                        <li><a href="contact.html" data-lang-en="Contact Us" data-lang-fr="Contactez-Nous">Contact Us</a></li>
+                    </ul>
+                </div>
 			</div>
-			<i class="fa fa-bars" onclick="showMenu()"></i>
 		</nav>
 
+
+
 	<div class="promo-box">
-		<h1>Services</h1>
+		<h1 data-lang-en="Our Services" data-lang-fr="Nos Services">Our Services</h1>
 	</div>
 	</section>
     
-    <main class="main-content">
-        <div class="carousel-container">
-            <h3>The Tools We Use</h3>
-        <div class="carousel">
+    <main class="services-main">
+        <div class="carousel-container-alt-5">
+            <h1 data-lang-en="The Tools We Use" data-lang-fr="Nos Outils">The Tools We Use</h1>
+            <div class="carousel-alt-5">
+                <div class="slide-alt-5">
+                    <a href="https://www.adobe.com/express/" target="_blank">
+                        <img src="../images/adobe-express.png" alt="">
+                    </a>
+                    <p>Adobe Express</p>
+                </div>
 
-            <div class="slide">
-            <img src="../images/tool.png" alt="">
-            <h3>Tool 1</h3>
-            <p>This is a description of tool 1.</p>
+                <div class="slide-alt-5">
+                    <a href="https://anireel.wondershare.com/" target="_blank">
+                        <img src="../images/wondershare-anireel.png" alt="">
+                    </a>
+                    <p>Wondershare Anireel</p>
+                </div>
+
+                <div class="slide-alt-5">
+                    <a href="https://www.adobe.com/products/photoshop.html" target="_blank">
+                        <img src="../images/adobe-photoshop.png" alt="">
+                    </a>
+                    <p>Adobee Photoshop</p>
+                </div>
+
+                <div class="slide-alt-5">
+                    <a href="https://www.wix.com/" target="_blank">
+                        <img src="../images/wix.png" alt="">
+                    </a>
+                    <p>Wix</p>
+                </div>
+
+                <div class="slide-alt-5">
+                    <a href="https://www.audacityteam.org/" target="_blank">
+                        <img src="../images/audacity.png" alt="">
+                    </a>
+                    <p>Audacity</p>
+                </div>
+
+                <div class="slide-alt-5">
+                    <a href="https://www.godaddy.com/en-ca" target="_blank">
+                        <img src="../images/godaddy.png" alt="">
+                    </a>
+                    <p>GoDaddy</p>
+                </div>
+
+                <div class="slide-alt-5">
+                    <a href="https://www.adobe.com/ca/products/animate.html" target="_blank">
+                        <img src="../images/adobe-animate.png" alt="">
+                    </a>
+                    <p>Adobe Animate</p>
+                </div>
+
+                <div class="slide-alt-5">
+                    <a href="https://kdenlive.org/" target="_blank">
+                        <img src="../images/kdenlive.png" alt="">
+                    </a>
+                    <p>KdenLive</p>
+                </div>
             </div>
 
-            <div class="slide">
-            <img src="../images/tool.png" alt="">
-            <h3>Tool 2</h3>
-            <p>This is a description of tool 2.</p>
-            </div>
-
-            <div class="slide">
-            <img src="../images/tool.png" alt="">
-            <h3>Tool 3</h3>
-            <p>This is a description of tool 3.</p>
-            </div>
-
-            <div class="slide">
-            <img src="../images/tool.png" alt="">
-            <h3>Tool 4</h3>
-            <p>This is a description of tool 4.</p>
-            </div>
-
-            <div class="slide">
-            <img src="../images/tool.png" alt="">
-            <h3>Tool 5</h3>
-            <p>This is a description of tool 5.</p>
+            <div class="controls-alt-5">
+                <input type="radio" name="carousel-radio-alt-5" id="alt-5-slide1" checked>
+                <input type="radio" name="carousel-radio-alt-5" id="alt-5-slide2">
+                <input type="radio" name="carousel-radio-alt-5" id="alt-5-slide3">
+                <input type="radio" name="carousel-radio-alt-5" id="alt-5-slide4">
+                <input type="radio" name="carousel-radio-alt-5" id="alt-5-slide5">
+                <input type="radio" name="carousel-radio-alt-5" id="alt-5-slide6">
             </div>
 
         </div>
 
-            <div class="controls">
-                <input type="radio" name="carousel-radio" id="slide1" checked>
-                <input type="radio" name="carousel-radio" id="slide2">
-                <input type="radio" name="carousel-radio" id="slide3">
-                <input type="radio" name="carousel-radio" id="slide4">
-                <input type="radio" name="carousel-radio" id="slide5">
-            </div>
-
-        </div>
     </main>
 
-
-  <script src="../script.js"></script>
+<script src="../script.js"></script>
 </body>
+
+
+<footer class="foot">
+  <h1>About XsTW</h2>
+  <h2>Who We Are</h2>
+  
+  <div class="social-links">
+    <a href="https://www.linkedin.com" target="_blank">
+      <img src="../images/linkedin.png" alt="LinkedIn">
+    </a>
+    <a href="https://twitter.com" target="_blank">
+      <img src="../images/twitter.png" alt="Twitter">
+    </a>
+    <a href="https://instagram.com" target="_blank">
+      <img src="../images/instagram.png" alt="Instagram">
+    </a>
+  </div>
+  
+  <p class="copyright">Copyright &copy; 2025 XsTream Ware. All rights reserved.</p>
+</footer>
+
+
 </html>

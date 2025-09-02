@@ -7,58 +7,170 @@
 	<link rel="stylesheet" href="../style.css?v1.1.7">
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/fontawesome.min.css">
 </head>
-<body>
+<body class="about-page">
 	<section class="header-other-sections">
-		<nav>
-			<div class="nav-links" id="navLinks">
-				<i class="fa fa-window-close-o" onclick="hideMenu()"></i>
+		<nav class="nav">
+			<div class="navbar">
+				<div id="webLogo"><a href="../index.html"><img src="../images/logo.png" alt="xstw logo"></a></div>
+
+				<div class="nav-links">
 				<ul>
-					<li id="webLogo"><a href="index.html"><img src="../images/logo.png" alt="xstw logo"></a></li>
-					<li><a href="../index.html">Home</a></li>
-					<!--<li><a href="download.html">Download</a></li>-->
-					<!--<li><a href="project.html">Project</a></li>-->
-					<li><a href="services.html">Services</a></li>
-					<li><a href="about.html">About</a></li>
-					<li><a href="links.html">Links</a></li>
-					<li><a href="contact.html">Contact Us</a></li>
-				</ul> 
+					<li><a href="../index.html" data-lang-en="Home" data-lang-fr="Accueil">Home</a></li>
+					<!-- <li><a href="download.html" data-lang-en="Download" data-lang-fr="Téléchargement">Downloads</a></li> -->
+					<!-- <li><a href="project.html" data-lang-en="Project" data-lang-fr="Projet">Project</a></li> -->
+					<li><a href="services.html" data-lang-en="Services" data-lang-fr="Services">Services</a></li>
+					<li><a href="about.html" data-lang-en="About" data-lang-fr="À Propos">About</a></li>
+					<!--<li><a href="links.html" data-lang-en="Links" data-lang-fr="Liens">Links</a></li>-->
+					<li><a href="contact.html" data-lang-en="Contact Us" data-lang-fr="Contactez-Nous">Contact Us</a></li>
+				</ul>
+				</div>
+
+				<div class="language-toggle">
+				<button id="languageButton">Français</button>
+				</div>
+
+				<!-- Hamburger Menu -->
+				<div class="hamburger" onclick="showMenu()">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+
+                <div class="mobile-nav" id="mobileNav">
+                    <ul>
+                        <li><a href="../index.html" data-lang-en="Home" data-lang-fr="Accueil">Home</a></li>
+                        <li><a href="download.html" data-lang-en="Download" data-lang-fr="Téléchargement">Downloads</a></li>
+                        <li><a href="project.html" data-lang-en="Project" data-lang-fr="Projet">Project</a></li>
+                        <li><a href="services.html" data-lang-en="Services" data-lang-fr="Services">Services</a></li>
+                        <li><a href="about.html" data-lang-en="About" data-lang-fr="À Propos">About</a></li>
+                        <li><a href="links.html" data-lang-en="Links" data-lang-fr="Liens">Links</a></li>
+                        <li><a href="contact.html" data-lang-en="Contact Us" data-lang-fr="Contactez-Nous">Contact Us</a></li>
+                    </ul>
+                </div>
 			</div>
-			<i class="fa fa-bars" onclick="showMenu()"></i>
 		</nav>
+
+
+
 	<div class="promo-box">
-		<h1>About</h1>
+		<h1 data-lang-en="About Us" data-lang-fr="À Propos de Nous">About Us</h1>
 	</div>
 	</section>
-		<h3>Team Leaders</h3>
-		
-		<style>
-		table, th, td {
- 		 border:1px solid black;
-		}
-		</style>
-		
-<table id="about-table">
-  <tr>
-    <th>Leaders</th>
-    <th></th>
-  </tr>
-  <tr>
-    <td>Sami</td>
-    <td>..</td>
-  </tr>
-  <tr>
-    <td>David</td>
-    <td>..</td>
-  </tr>
-  <tr>
-    <td>J.F.I.</td>
-    <td>..</td>
-  </tr>
-    <tr>
-    <td>B.N.</td>
-    <td>..</td>
-  </tr>
-</table>
 
+<main class="about-main">
+<!--
+	<div class="cards-container">
+
+		<div class="card">
+		<img src="../images/sami.jpg" alt="Person 1">
+		<h3>Sami</h3>
+		<p data-lang-en="With experience in project management, 
+					he has developed skills that allow him to make strategic decisions and deploy the necessary measures to achieve our vision.
+					He has applied experience in programming and a fundamental knowledge in system administration." 
+			data-lang-fr="Avec une expérience en gestion de projet, 
+						il a développé des compétences en management qui permettent de prendre des décisions stratégiques et 
+						de déployer les mesures nécessaires pour atteindre notre but. Étudiant en biochimie, mais son cœur qui bat pour la science informatique, 
+						il possède de l'expérience en programmation et une connaissance fondamentale dans l'administration des systèmes. ">
+						With experience in project management, 
+						he has developed skills that allow him to make strategic decisions and deploy the necessary measures to achieve our vision. 
+						Currently a student in biochemistry with a passion for computer science,
+						He has applied experience in programming and a fundamental knowledge in system administration.</p>
+		</div>
+
+		<div class="card">
+		<img src="../images/david.jpg" alt="Person 2">
+		<h3>David</h3>
+		<p data-lang-en="A passionate worker dedicated to solving complex problems. Having completed the University Technology Pathway program in computer science at 
+						the École de technologie supérieure, he specializes in low-level programming. He also has extensive knowledge in website development and 
+						is pursuing a bachelor's degree in electrical engineering." 
+			data-lang-fr="Travailleur passionné par la résolution de problèmes difficiles  et ayant suivi le programme du Cheminement universitaire en technologie, 
+							volet informatique, de l'École de technologie supérieure, il se spécialise dans la programmation de bas niveau. 
+							Il possède également des connaissances approfondies dans la mise en place de sites internet et poursuit ses études au baccalauréat en génie électrique.">
+						A passionate worker dedicated to solving complex problems. Having completed the University Technology Pathway program in computer science at 
+						the École de technologie supérieure, he specializes in low-level programming. He also has extensive knowledge in website development and 
+						is pursuing a bachelor's degree in electrical engineering.</p>
+		</div>
+
+		<div class="card">
+		<img src="../images/banner.jpg" alt="Person 3">
+		<h3>Joseph</h3>
+		<p data-lang-en="Program" 
+			data-lang-fr="Programme">
+				Program</p>
+		</div>
+
+		<div class="card">
+		<img src="../images/brandon.jpg" alt="Person 4">
+		<h3>Brandon</h3>
+		<p data-lang-en="Third-year Computer Science student at Concordia University. He is passionate about programming, 
+							specifically web design and mobile applications. He also has skills in database management." 
+			data-lang-fr="Étudiant de 3eme année en Informatique à l’Université de Concordia. Il est passionné de programmation, 
+							spécifiquement dans le design web ainsi que dans les applications mobiles. 
+							Il possède également des compétences dans la gestion des bases de données. ">
+				Third-year Computer Science student at Concordia University. He is passionate about programming, 
+							specifically web design and mobile applications. He also has skills in database management.</p>
+		</div>
+
+	</div>
+	-->
+
+
+	<div class="cards-container-v2">
+		<div class="card-left">
+			<img src="../images/sami.jpg" alt="Sami">
+			<div class="card-text">
+				<h3>Sami</h3>
+			</div>
+		</div>
+
+		<div class="card-right">
+			<img src="../images/david.jpg" alt="David">
+			<div class="card-text">
+				<h3>David</h3>
+			</div>
+		</div>
+
+		<div class="card-left">
+			<img src="../images/banner.jpg" alt="Joseph">
+			<div class="card-text">
+				<h3>Joseph</h3>
+			</div>
+		</div>
+
+		<div class="card-right">
+			<img src="../images/brandon.jpg" alt="Brandon">
+			<div class="card-text">
+				<h3>Brandon</h3>
+			</div>
+		</div>
+
+	</div>
+
+</main>
+
+<script src="../script.js"></script>
 </body>
+
+
+<footer class="foot">
+  <h1>About XsTW</h2>
+  <h2>Who We Are</h2>
+  
+  <div class="social-links">
+    <a href="https://www.linkedin.com" target="_blank">
+      <img src="../images/linkedin.png" alt="LinkedIn">
+    </a>
+    <a href="https://twitter.com" target="_blank">
+      <img src="../images/twitter.png" alt="Twitter">
+    </a>
+    <a href="https://instagram.com" target="_blank">
+      <img src="../images/instagram.png" alt="Instagram">
+    </a>
+  </div>
+  
+  <p class="copyright">Copyright &copy; 2025 XsTream Ware. All rights reserved.</p>
+</footer>
+
+
+
 </html>

@@ -7,43 +7,92 @@
 	<link rel="stylesheet" href="../style.css?v1.1.6">
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/fontawesome.min.css">
 </head>
-<body>
+<body class="download-page">
 	<section class="header-other-sections">
-		<nav>
-			<div class="nav-links" id="navLinks">
-				<i class="fa fa-window-close-o" onclick="hideMenu()"></i>
+		<nav class="nav">
+			<div class="navbar">
+				<div id="webLogo"><a href="index.html"><img src="../images/logo.png" alt="xstw logo"></a></div>
+
+				<div class="nav-links">
 				<ul>
-					<li id="webLogo"><a href="index.html"><img src="../images/logo.png" alt="xstw logo"></a></li>
-					<li><a href="../index.html">Home</a></li>
-					<li><a href="download.html">Download</a></li>
-					<li><a href="project.html">Project</a></li>
-                    <li><a href="services.html">Services</a></li>
-					<li><a href="about.html">About</a></li>
-					<li><a href="links.html">Links</a></li>
-					<li><a href="contact.html">Contact Us</a></li>
-				</ul> 
+					<li><a href="../index.html" data-lang-en="Home" data-lang-fr="Accueil">Home</a></li>
+					<li><a href="download.html" data-lang-en="Download" data-lang-fr="Téléchargement">Downloads</a></li>
+					<li><a href="project.html" data-lang-en="Project" data-lang-fr="Projet">Project</a></li>
+					<li><a href="services.html" data-lang-en="Services" data-lang-fr="Services">Services</a></li>
+					<li><a href="about.html" data-lang-en="About" data-lang-fr="À Propos">About</a></li>
+					<li><a href="links.html" data-lang-en="Links" data-lang-fr="Liens">Links</a></li>
+					<li><a href="contact.html" data-lang-en="Contact Us" data-lang-fr="Contactez-Nous">Contact Us</a></li>
+				</ul>
+				</div>
+
+				<div class="language-toggle">
+				<button id="languageButton">Français</button>
+				</div>
+
+				<!-- Hamburger Menu -->
+				<div class="hamburger" onclick="showMenu()">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+
+                <div class="mobile-nav" id="mobileNav">
+                    <ul>
+                        <li><a href="../index.html" data-lang-en="Home" data-lang-fr="Accueil">Home</a></li>
+                        <li><a href="download.html" data-lang-en="Download" data-lang-fr="Téléchargement">Downloads</a></li>
+                        <li><a href="project.html" data-lang-en="Project" data-lang-fr="Projet">Project</a></li>
+                        <li><a href="services.html" data-lang-en="Services" data-lang-fr="Services">Services</a></li>
+                        <li><a href="about.html" data-lang-en="About" data-lang-fr="À Propos">About</a></li>
+                        <li><a href="links.html" data-lang-en="Links" data-lang-fr="Liens">Links</a></li>
+                        <li><a href="contact.html" data-lang-en="Contact Us" data-lang-fr="Contactez-Nous">Contact Us</a></li>
+                    </ul>
+                </div>
 			</div>
-			<i class="fa fa-bars" onclick="showMenu()"></i>
 		</nav>
+
+
+
 	<div class="promo-box">
-		<h1>XT OS</h1>
-		<p>Good things are coming ...</p>
-		<a href="https://apps.microsoft.com/detail/9NMXD5V59GR9?hl=en-ca&gl=US" class="hero-btn">XT Notepad</a>
+		<h1 data-lang-en="Downloads" data-lang-fr="Téléchargements">Downloads</h1>
 	</div>
 	</section>
 	
 
-	<div class="promo-box-download">
-		<h3>Choose the appropriate install procedure bellow.</h3>
-		<p>For more information, follow the installation guide.</p>
-		<a href="" class="hero-btn2">Installation Guide</a>
-	</div>
+	<main class="download-main">
+		<div class="promo-box-download">
+			<h3>Choose the appropriate install procedure bellow.</h3>
+			<p>For more information, follow the installation guide.</p>
+			<a href="" class="hero-btn2">Installation Guide</a>
+		</div>
 
-	<div class="program-list">
-		<h3>Basic utilities: </h3>
+		<div class="program-list">
+			<h3>Basic utilities: </h3>
+		
+		</div>
+	</main>
 	
-	</div>
-	
-	
+<script src="../script.js"></script>
 </body>
+
+
+<footer class="foot">
+  <h1>About XsTW</h2>
+  <p>Who We Are</p>
+  
+  <div class="social-links">
+    <a href="https://www.linkedin.com" target="_blank">
+      <img src="../images/linkedin.png" alt="LinkedIn">
+    </a>
+    <a href="https://twitter.com" target="_blank">
+      <img src="../images/twitter.png" alt="Twitter">
+    </a>
+    <a href="https://instagram.com" target="_blank">
+      <img src="../images/instagram.png" alt="Instagram">
+    </a>
+  </div>
+  
+  <p class="copyright">&copy; XsTream Ware 2025</p>
+</footer>
+
+
 </html>
